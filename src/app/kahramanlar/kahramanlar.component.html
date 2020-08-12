@@ -1,0 +1,14 @@
+<h2>{{selectedKahraman.name| uppercase}} Details</h2>
+<div><span>id: </span>{{selectedKahraman.id}}</div>
+<div>
+    <label>name:
+      <input [(ngModel)]="selectedKahraman.name" placeholder="name"/>
+    </label>
+  </div>
+
+  <h2>My kahramanlar</h2>
+<ul>
+  <li *ngFor="let kahraman of kahramanlar" (click)="onSelect(kahraman)">
+    <span class="badge">{{selectedKahraman.id}}</span> {{selectedKahraman.name}}
+  </li>
+</ul>

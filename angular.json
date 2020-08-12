@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-kahramanlar-turu"
+    }
+  },
+  "defaultProject": "angular-kahramanlar-turu",
+  "cli": {
+    "analytics": "8343d0d1-f179-431b-9949-432991333779"
+  }
 }
