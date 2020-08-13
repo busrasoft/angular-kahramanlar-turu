@@ -8,16 +8,16 @@ import { KAHRAMANLAR } from '../mock-kahramanlar';
   styleUrls: ['./kahramanlar.component.css']
 })
 export class KahramanlarComponent implements OnInit {
-  kahraman = KAHRAMANLAR;
-  
+
+  kahramanlar = KAHRAMANLAR;  
   selectedKahraman: Kahraman;
 
-  onSelect(kahraman: Kahraman): void {
-    this.selectedKahraman = kahraman;
-  }
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSelect(kahraman: Kahraman): void {
+    this.selectedKahraman = kahraman;
+  }
 }
