@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KahramanlarComponent } from './kahramanlar/kahramanlar.component';
+import { KahramanDetayiComponent } from './kahraman-detayi/kahraman-detayi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KahramanlarComponent
+    KahramanlarComponent,
+    KahramanDetayiComponent
   ],
   imports: [
     BrowserModule,
