@@ -32,4 +32,9 @@ export class KahramanDetayiComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    this.kahramanService.updateKahraman(this.kahraman)
+      .subscribe(() => this.goBack());
+  }
 }
