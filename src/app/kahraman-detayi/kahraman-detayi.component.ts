@@ -1,9 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { KahramanService } from '../kahraman.service';
 
 import { Kahraman } from '../kahraman';
+import { KahramanService } from '../kahraman.service';
 
 @Component({
   selector: 'app-kahraman-detayi',
@@ -11,13 +11,13 @@ import { Kahraman } from '../kahraman';
   styleUrls: ['./kahraman-detayi.component.css']
 })
 export class KahramanDetayiComponent implements OnInit {
+  kahraman: Kahraman;
 
-  @Input() kahraman : Kahraman;
   constructor(
     private route: ActivatedRoute,
     private kahramanService: KahramanService,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getKahraman();
@@ -28,6 +28,7 @@ export class KahramanDetayiComponent implements OnInit {
     this.kahramanService.getKahraman(id)
     .subscribe(kahraman => this.kahraman = kahraman);
   }
+  
   goBack(): void {
     this.location.back();
   }

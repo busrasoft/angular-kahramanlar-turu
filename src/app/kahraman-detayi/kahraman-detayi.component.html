@@ -1,12 +1,10 @@
-<div  *ngIf="kahraman">
-
-    <h2>{{kahraman.name | uppercase}} Details</h2>
-    <div><span>ID: </span>{{kahraman.id}}</div>
-    <div>
-      <label>Isim:
-        <input [(ngModel)]="kahraman.name" placeholder="name"/>
-      </label>
-    </div>
-    
+<div *ngIf="kahraman">
+  <h2>{{kahraman.name | uppercase}} Detaylar</h2>
+  <div><span>ID: </span>{{kahraman.id}}</div>
+  <div>
+    <label>Isim:
+      <input [(ngModel)]="kahraman.name" placeholder="name" />
+    </label>
+  </div>
+  <button (click)="goBack()">Geri Git</button>
 </div>
-   <button (click)="goBack()">Go Back</button> 

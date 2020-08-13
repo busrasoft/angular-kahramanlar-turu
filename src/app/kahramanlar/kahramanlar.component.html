@@ -1,10 +1,8 @@
 <h2>My kahramanlar</h2>
 <ul class="heroes">
   <li *ngFor="let kahraman of kahramanlar">
-    <a routerLink="/detay/{{kahraman.id}}">
+    <a routerLink="/detail/{{kahraman.id}}">
       <span class="badge">{{kahraman.id}}</span> {{kahraman.name}}
     </a>
   </li>
 </ul>
-
-<app-kahraman-detayi [kahraman]="selectedKahraman"></app-kahraman-detayi>
