@@ -1,0 +1,6 @@
+<div *ngIf="mesajService.mesaj.length">
+
+    <h2>Mesajlar</h2>
+    <button class="clear" (click)="mesajService.clear()">Temizle</button>
+    <div *ngFor='let mesaj of mesajService.mesaj'>{{mesaj}}</div>
+</div>

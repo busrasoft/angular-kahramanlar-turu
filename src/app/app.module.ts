@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KahramanlarComponent } from './kahramanlar/kahramanlar.component';
 import { KahramanDetayiComponent } from './kahraman-detayi/kahraman-detayi.component';
+import { MesajlarComponent } from './mesajlar/mesajlar.component';
+import { GostergePaneliComponent } from './gosterge-paneli/gosterge-paneli.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KahramanlarComponent,
-    KahramanDetayiComponent
+    KahramanDetayiComponent,
+    MesajlarComponent,
+    GostergePaneliComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { KahramanService } from '../kahraman.service';
 import { Kahraman } from '../kahraman';
-import { KAHRAMANLAR } from '../mock-kahramanlar';
+import { MesajService } from '../mesaj.service';
+
 
 @Component({
   selector: 'app-kahramanlar',
@@ -8,16 +10,25 @@ import { KAHRAMANLAR } from '../mock-kahramanlar';
   styleUrls: ['./kahramanlar.component.css']
 })
 export class KahramanlarComponent implements OnInit {
-
-  kahramanlar = KAHRAMANLAR;  
   selectedKahraman: Kahraman;
 
-  constructor() { }
+  kahramanlar: Kahraman[];  
+
+  constructor( 
+    private mesajService: MesajService,
+    private kahramanService: KahramanService) { }
 
   ngOnInit(): void {
+    this.getKahramanlar();
   }
 
   onSelect(kahraman: Kahraman): void {
     this.selectedKahraman = kahraman;
+    this.mesajService.add(`KahramanComponent : Secili kahramanin IDsi =${kahraman.id}`);
+  }
+
+  getKahramanlar(): void {
+    this.kahramanService.getKahramanlar()
+    .subscribe(kahramanlar=>this.kahramanlar=kahramanlar);
   }
 }
